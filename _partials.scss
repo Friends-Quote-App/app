@@ -1,0 +1,20 @@
+//Style
+
+$whiteFriends: #fcfcfc;
+$yellowFriends: #f8bc1a;
+$hoveredFriends: #e2a600;
+$blackFriends: #1b1a1a;
+
+@mixin button {
+  background-color: $yellowFriends;
+  color: $blackFriends;
+  width: 21.8rem;
+  height: 3.12rem;
+  border-radius: 0.625rem;
+  i {
+    color: $blackFriends;
+  }
+  &:hover {
+    background-color: $hoveredFriends;
+  }
+}
