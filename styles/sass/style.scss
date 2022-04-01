@@ -1,4 +1,4 @@
-@import "./partials.scss";
+@import "./partials/partials";
 
 body {
   background-color: $blackFriends;
@@ -13,7 +13,7 @@ body {
 }
 @font-face {
   font-family: "Friends";
-  src: url("GABRWFFR.TTF");
+  src: url("../assets/GABRWFFR.TTF");
 }
 h1,
 h5 {
