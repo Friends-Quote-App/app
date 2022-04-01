@@ -31,14 +31,61 @@ console.log("test test test")
 
 friendsApp = {};
 
-// no api required
-friendsApp.url = new URL("https://friends-quotes-api.herokuapp.com/quotes/100");
-// below not necessary yet
-// friendsApp.url.search = new URLSearchParams({quotes})
+// base url for api
+friendsApp.url = new URL("https://friends-quotes-api.herokuapp.com/quotes/");
 
-fetch(friendsApp.url)
-.then(response => response.json())
-.then(data => console.log(data));
+// method to get user selection when button is clicked
+friendsApp.userChoice = () => {
+  const button = document.querySelector(".random-button");
+  const pulldownMenu = document.getElementById("friends-name");
+  let friendChoice = pulldownMenu.value;
+  // when the "shuffle" button is clicked, run the code blow
+  button.addEventListener("click", function(event) {
+    // stop default behaviour of button click
+    event.preventDefault();
+    // on button click, store the value of the pulldown menu
+    friendChoice = pulldownMenu.value;
+    console.log(friendChoice);
+    // run method to display data on page
+    friendsApp.displayData(friendChoice);
+  })
+}
+
+// method to display quote on page
+friendsApp.displayData = (character) => {
+  // filter returned data so it's just an array of quotes from the character the equals the user's choice
+  // create new p element
+  const quoteElement = document.createElement("p");
+  // create text node and put character quote into it
+  const quote = document.createTextNode(`a quote from ${character}`); 
+  // put quote inside new p element
+  quoteElement.appendChild(quote);
+  // grab quote box
+  const quoteBox = document.querySelector(".board");
+  // clear current text in quote box
+  quoteBox.innerHTML = "";
+  // append into quote box on html 
+  quoteBox.appendChild(quoteElement);
+}
+
+// method to request quote data from api
+friendsApp.getQuotes = () => {
+  fetch(friendsApp.url)
+  .then(response => response.json())
+  .then((data) => {
+    console.log(data);
+    friendsApp.userChoice();
+  })
+}
+
+// create an initialization method
+friendsApp.init = () => {
+  // calling the method that makes the api request
+  friendsApp.getQuotes();
+}
+
+// call the init method to start the app
+friendsApp.init();
 
 
 
