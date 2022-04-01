@@ -8,11 +8,15 @@ $blackFriends: #1b1a1a;
 @mixin button {
   background-color: $yellowFriends;
   color: $blackFriends;
-  width: 21.8rem;
+  width: 20rem;
   height: 3.12rem;
   border-radius: 0.625rem;
+  border: 1px solid $whiteFriends;
+  font-weight: bold;
+  font-size: 1.5rem;
   i {
     color: $blackFriends;
+    padding-left: 0.625rem;
   }
   &:hover {
     background-color: $hoveredFriends;
