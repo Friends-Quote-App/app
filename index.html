@@ -13,25 +13,45 @@
     <header>
         <div class="logo">
             <img src="./assets/friendslogo.svg" alt="Friends Logo">
+            <p>Hey, how you doin? Looking for something fun? Select a to read a quote from one of our loved Friends, or
+                just
+                press the button if you want a surprise!</p>
         </div>
-        <p>write instructions here</p>
+
     </header>
     <main>
-        <div class="wrapper">
+        <section class="wrapper">
             <div class="quote-selection">
-                <div class="dropdown-menu">
-
+                <div class="dropdown">
+                    <label for="names" sr-only="true" aria-hidden="true">Select a name:</label>
+                    <select name="friends-name" id="friends-name">
+                        <option value="chandler">Chandler</option>
+                        <option value="joey">Joey</option>
+                        <option value="monica">Monica</option>
+                        <option value="phoebe">Phoebe</option>
+                        <option value="rachel">Rachel</option>
+                        <option value="ross">Ross</option>
+                    </select>
                 </div>
+
                 <div class="random-button">
-                    <button>SHUFFLE <i src="/assets/shuffle.svg"></i></button>
+                    <button>SHUFFLE <i class="fa-solid fa-shuffle fa-sm"></i></i></button>
                 </div>
-            </div>
-            <div class="doorframe">
-                <img src="" alt="">
-            </div>
-            <div class="quotebox">
+        </section>
+        <section class="quote-section">
+            <figure class="doorframe">
+                <img src="./assets/doorframe.svg" alt="Yellow door frame">
+            </figure>
+            <aside class="quotebox">
+                <div class="board">
 
-            </div>
+
+                </div>
+
+            </aside>
+
+        </section>
+
         </div>
     </main>
     <footer>
@@ -42,9 +62,8 @@
             <h5>Brian O’Reilly | Priscila Mattos - Juno College 2022 - Cohort 40</h5>
         </div>
     </footer>
-
-
-<script src="./styles/app.js"></script>
+    <script src="https://kit.fontawesome.com/dbb28dec5b.js" crossorigin="anonymous"></script>
+    <script src="./styles/app.js"></script>
 </body>
 
 </html>
