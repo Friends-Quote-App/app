@@ -4,6 +4,7 @@
   src: url("./assets/gabrwffr-webfont.woff"), url("./assets/gabrwffr-webfont.woff2"), url("./assets/GABRWFFR.TTF");
   font-weight: normal;
 }
+
 body {
   background-color: #1b1a1a;
   height: 100vh;
@@ -24,6 +25,7 @@ body {
   font-family: "Friends";
   src: url("../assets/GABRWFFR.TTF");
 }
+
 h1,
 h5 {
   font-family: JuneBug;
@@ -46,10 +48,12 @@ header .logo {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
 header .logo img {
   width: 70%;
   height: 70%;
 }
+
 header .logo p {
   text-align: center;
   font-size: 2rem;
@@ -72,25 +76,30 @@ header .logo p {
       -ms-flex-align: center;
           align-items: center;
 }
+
 .quote-selection .dropdown {
   width: 50%;
   text-align: center;
 }
+
 .quote-selection .dropdown label {
   color: #fcfcfc;
   font-size: 1.5rem;
   font-family: "Roboto", sans-serif;
   padding-right: 1.5rem;
 }
+
 .quote-selection .dropdown select {
   width: 10rem;
   padding-left: 0.625rem;
   height: 2.5rem;
 }
+
 .quote-selection .random-button {
   width: 50%;
   text-align: center;
 }
+
 .quote-selection .random-button button {
   background-color: #f8bc1a;
   color: #1b1a1a;
@@ -100,11 +109,14 @@ header .logo p {
   border: 1px solid #fcfcfc;
   font-weight: bold;
   font-size: 1.5rem;
+  font-family: "Friends";
 }
+
 .quote-selection .random-button button i {
   color: #1b1a1a;
   padding-left: 0.625rem;
 }
+
 .quote-selection .random-button button:hover {
   background-color: #e2a600;
 }
@@ -116,7 +128,9 @@ header .logo p {
   max-width: 1280px;
   margin: 0 auto;
 }
+
 .quote-section .doorframe {
+  position: relative;
   width: 50%;
   height: 30vh;
   display: -webkit-box;
@@ -125,15 +139,34 @@ header .logo p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.quote-section .doorframe img {
+
+.quote-section .doorframe .frame {
+  position: absolute;
+  z-index: 5;
   width: 80%;
   height: auto;
 }
+
+.quote-section .doorframe .friendPhoto {
+  z-index: 1;
+  position: absolute;
+  width: 220px;
+  height: 280px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 100% 0;
+     object-position: 100% 0;
+}
+
 .quote-section .quotebox {
   height: auto;
   width: 50%;
 }
+
 .quote-section .quotebox .board {
   background-color: #fcfcfc;
   border-radius: 10px;
@@ -147,15 +180,18 @@ footer {
   bottom: 0;
   position: absolute;
 }
+
 footer .wrapper {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+
 footer .logo-footer {
   width: 30%;
   height: auto;
 }
+
 footer h5 {
   font-size: 20px;
   text-align: center;
