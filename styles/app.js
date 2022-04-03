@@ -1,20 +1,5 @@
-// GET USER DATA
-// Character selection dropdown menu will provide main characters (and some minor faves) as options to select.
-// “Get a Quote!” button with click/submit event listener. Once triggered, save all user values in any associated input fields as variables (method: characterChoice).
 
-// 	MANIPULATE DATA/FETCH RESPONSE
-// Code method (getQuote) to return values related to characterChoice (user input) through API call.
-// Store returned API data as variables to fulfill initial request (i.e. quote itself, episode name, season number).
-// Alert user should they attempt to submit “Get a Quote!” button without choosing value for character select.
-
-// 	DISPLAY API DATA/MANIPULATE DOM
-// Code method (displayData) to display returned values of getQuote method by:
-// Store HTML DOM elements to be altered as variables.
-// Create new HTML elements required to display returned API data.
-// Populate and append created elements within the properly defined DOM structure with stored API data
-
-// STRETCH: Upon presenting the quote to user, offer user choice to select to see another quote, plot synopsis of current quote, details related to episode, any other applicable data returned from getQuote method.
-
+// create namespace
 friendsApp = {};
 
 // base url for api
@@ -31,22 +16,17 @@ friendsApp.userChoice = (allQuotes) => {
     event.preventDefault();
     // on button click, store the value of the pulldown menu
     friendChoice = pulldownMenu.value;
-    console.log(friendChoice);
-    console.log(allQuotes);
-    // run method to display data on page
-    friendsApp.displayData(friendChoice);
     // run function to filter new array with just quotes from selection
     friendsApp.characterQuotes(allQuotes, friendChoice);
-
   })
 }
 
 // method to display quote on page
-friendsApp.displayData = (character) => {
+friendsApp.displayData = (displayQuote) => {
   // create new p element
   const quoteElement = document.createElement("p");
   // create text node and put character quote into it
-  const quote = document.createTextNode(`a quote from ${character}`); 
+  const quote = document.createTextNode(displayQuote); 
   // put quote inside new p element
   quoteElement.appendChild(quote);
   // grab quote box
@@ -59,7 +39,6 @@ friendsApp.displayData = (character) => {
 
 // method to create new array with JUST quotes from the character selected
 friendsApp.characterQuotes = (allQuotes, friendChoice) => {
-  console.log(allQuotes, friendChoice);
   // capitalize first letter in friendChoice
   const firstLetter = friendChoice.charAt(0);
   const capitalLetter = firstLetter.toUpperCase();
@@ -67,11 +46,16 @@ friendsApp.characterQuotes = (allQuotes, friendChoice) => {
   const friendChoiceCapital = capitalLetter + smallLetters;
 
   // filter new array with just quotes from user selected character
-  const characterQuotes = allQuotes.filter((quote) => {
-    return quote.character === friendChoiceCapital;
+  const characterQuotes = allQuotes.filter((quotes) => {
+    return quotes.character === friendChoiceCapital;
   });
-
+  // select a random quote from array
+  // pass random quote variable to friendsApp.displayData method
   console.log(characterQuotes);
+  const randomQuote = characterQuotes[Math.floor(Math.random()*characterQuotes.length)].quote;
+
+  // run method to display data on page
+  friendsApp.displayData(randomQuote);
 }
 
 // method to request quote data from api
