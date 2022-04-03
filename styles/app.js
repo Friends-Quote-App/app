@@ -21,7 +21,7 @@ friendsApp = {};
 friendsApp.url = new URL("https://friends-quotes-api.herokuapp.com/quotes/");
 
 // method to get user selection when button is clicked
-friendsApp.userChoice = () => {
+friendsApp.userChoice = (allQuotes) => {
   const button = document.querySelector(".random-button");
   const pulldownMenu = document.getElementById("friends-name");
   let friendChoice = pulldownMenu.value;
@@ -32,14 +32,17 @@ friendsApp.userChoice = () => {
     // on button click, store the value of the pulldown menu
     friendChoice = pulldownMenu.value;
     console.log(friendChoice);
+    console.log(allQuotes);
     // run method to display data on page
     friendsApp.displayData(friendChoice);
+    // run function to filter new array with just quotes from selection
+    friendsApp.characterQuotes(allQuotes, friendChoice);
+
   })
 }
 
 // method to display quote on page
 friendsApp.displayData = (character) => {
-  // filter returned data so it's just an array of quotes from the character the equals the user's choice
   // create new p element
   const quoteElement = document.createElement("p");
   // create text node and put character quote into it
@@ -54,13 +57,33 @@ friendsApp.displayData = (character) => {
   quoteBox.appendChild(quoteElement);
 }
 
+// method to create new array with JUST quotes from the character selected
+friendsApp.characterQuotes = (allQuotes, friendChoice) => {
+  console.log(allQuotes, friendChoice);
+  // capitalize first letter in friendChoice
+  const firstLetter = friendChoice.charAt(0);
+  const capitalLetter = firstLetter.toUpperCase();
+  const smallLetters = friendChoice.slice(1);
+  const friendChoiceCapital = capitalLetter + smallLetters;
+
+  // filter new array with just quotes from user selected character
+  const characterQuotes = allQuotes.filter((quote) => {
+    return quote.character === friendChoiceCapital;
+  });
+
+  console.log(characterQuotes);
+}
+
 // method to request quote data from api
 friendsApp.getQuotes = () => {
   fetch(friendsApp.url)
   .then(response => response.json())
   .then((data) => {
     console.log(data);
-    friendsApp.userChoice();
+    // storing data in an array 
+    const allQuotes = data;
+    // run function to see user selection (returned as "character")
+    friendsApp.userChoice(allQuotes);
   })
 }
 
