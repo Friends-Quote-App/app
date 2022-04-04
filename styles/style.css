@@ -1,10 +1,246 @@
+html {
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+article, aside, footer, header, nav, section {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+figcaption, figure, main {
+  display: block;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+b, strong {
+  font-weight: inherit;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+code, kbd, samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+audio, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img {
+  border-style: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button, input {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, html [type=button], [type=reset], [type=submit] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type=checkbox], [type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details, menu {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+canvas {
+  display: inline-block;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* Importing Friends Font */
 @font-face {
   font-family: "friends-font";
   src: url("./assets/gabrwffr-webfont.woff"), url("./assets/gabrwffr-webfont.woff2"), url("./assets/GABRWFFR.TTF");
   font-weight: normal;
 }
-
 body {
   background-color: #1b1a1a;
   height: 100vh;
@@ -25,7 +261,6 @@ body {
   font-family: "Friends";
   src: url("../assets/GABRWFFR.TTF");
 }
-
 h1,
 h5 {
   font-family: JuneBug;
@@ -48,12 +283,10 @@ header .logo {
       -ms-flex-pack: center;
           justify-content: center;
 }
-
 header .logo img {
   width: 70%;
   height: 70%;
 }
-
 header .logo p {
   text-align: center;
   font-size: 2rem;
@@ -76,30 +309,25 @@ header .logo p {
       -ms-flex-align: center;
           align-items: center;
 }
-
 .quote-selection .dropdown {
   width: 50%;
   text-align: center;
 }
-
 .quote-selection .dropdown label {
   color: #fcfcfc;
   font-size: 1.5rem;
   font-family: "Roboto", sans-serif;
   padding-right: 1.5rem;
 }
-
 .quote-selection .dropdown select {
   width: 10rem;
   padding-left: 0.625rem;
   height: 2.5rem;
 }
-
 .quote-selection .random-button {
   width: 50%;
   text-align: center;
 }
-
 .quote-selection .random-button button {
   background-color: #f8bc1a;
   color: #1b1a1a;
@@ -111,12 +339,10 @@ header .logo p {
   font-size: 1.5rem;
   font-family: "Friends";
 }
-
 .quote-selection .random-button button i {
   color: #1b1a1a;
   padding-left: 0.625rem;
 }
-
 .quote-selection .random-button button:hover {
   background-color: #e2a600;
 }
@@ -132,7 +358,6 @@ header .logo p {
   margin: 0 auto;
   height: 40rem;
 }
-
 .quote-section .doorframe {
   position: relative;
   width: 50%;
@@ -147,14 +372,12 @@ header .logo p {
       -ms-flex-pack: center;
           justify-content: center;
 }
-
 .quote-section .doorframe .frame {
   position: absolute;
   z-index: 5;
   width: 80%;
   height: auto;
 }
-
 .quote-section .doorframe .friendPhoto {
   z-index: 1;
   position: absolute;
@@ -165,12 +388,10 @@ header .logo p {
   -o-object-position: 100% 0;
      object-position: 100% 0;
 }
-
 .quote-section .quotebox {
   height: auto;
   width: 50%;
 }
-
 .quote-section .quotebox .board {
   background-color: #1b1a1a;
   border-radius: 0.625rem;
@@ -185,7 +406,6 @@ header .logo p {
       -ms-flex-align: center;
           align-items: center;
 }
-
 .quote-section .quotebox .board p {
   font-family: "Friends";
   color: #fcfcfc;
@@ -198,18 +418,15 @@ footer {
   bottom: 0;
   position: relative;
 }
-
 footer .wrapper {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-
 footer .logo-footer {
   width: 30%;
   height: auto;
 }
-
 footer h5 {
   font-size: 20px;
   text-align: center;
@@ -223,7 +440,6 @@ footer h5 {
     height: 11.875rem;
   }
 }
-
 @media (max-width: 699px) {
   header .logo {
     height: auto;
@@ -232,6 +448,7 @@ footer h5 {
     max-width: 100%;
     font-size: 1.5rem;
   }
+
   .quote-selection {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -244,6 +461,7 @@ footer h5 {
   .quote-selection .dropdown {
     width: 100%;
   }
+
   .quote-section {
     margin: 1.875rem 0;
     -webkit-box-orient: vertical;
@@ -265,6 +483,7 @@ footer h5 {
     max-width: 9.8rem;
     height: 12.5rem;
   }
+
   footer .wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
