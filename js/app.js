@@ -1,8 +1,4 @@
 import { photoFriends } from "./friends.js";
-console.log(photoFriends);
-
-console.log("this is working");
-
 // PSEUDO CODE
 
 // Welcome page with Friends banner in header & brief instructions to select a character from a drop down menu and a button the user can use to “Get a Quote!”. HTML layout, example quotes, and placeholder text in relevant input fields will help orient users to the instructions meaning.
@@ -28,8 +24,6 @@ console.log("this is working");
 // Populate and append created elements within the properly defined DOM structure with stored API data
 
 // STRETCH: Upon presenting the quote to user, offer user choice to select to see another quote, plot synopsis of current quote, details related to episode, any other applicable data returned from getQuote method.
-
-console.log("test test test");
 
 const friendsApp = {};
 
@@ -72,15 +66,9 @@ friendsApp.displayData = (displayQuote) => {
 
 // method to create new array with JUST quotes from the character selected
 friendsApp.characterQuotes = (allQuotes, friendChoice) => {
-  // capitalize first letter in friendChoice
-  const firstLetter = friendChoice.charAt(0);
-  const capitalLetter = firstLetter.toUpperCase();
-  const smallLetters = friendChoice.slice(1);
-  const friendChoiceCapital = capitalLetter + smallLetters;
-
   // filter new array with just quotes from user selected character
   const characterQuotes = allQuotes.filter((quotes) => {
-    return quotes.character === friendChoiceCapital;
+    return quotes.character === friendChoice;
   });
   // select a random quote from array
   // pass random quote variable to friendsApp.displayData method
@@ -97,7 +85,6 @@ friendsApp.getQuotes = () => {
   fetch(friendsApp.url)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       // storing data in an array
       const allQuotes = data;
       // run function to see user selection (returned as "character")
