@@ -225,25 +225,31 @@ footer h5 {
 }
 
 @media (max-width: 699px) {
+  header .logo {
+    height: auto;
+  }
+  header .logo p {
+    max-width: 100%;
+    font-size: 1.5rem;
+  }
   .quote-selection {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .quote-selection .random-button {
+    width: 100%;
+  }
   .quote-selection .dropdown {
     width: 100%;
   }
   .quote-section {
-    margin: 30px 0;
+    margin: 1.875rem 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  .quote-section .doorframe .friendPhoto {
-    max-width: 140px;
-    height: 200px;
   }
   .quote-section .quotebox {
     width: 100%;
@@ -251,10 +257,20 @@ footer h5 {
   .quote-section .quotebox .board {
     width: 100%;
   }
-  .quote-section footer .wrapper {
+  .quote-section .doorframe {
+    width: 100%;
+  }
+  .quote-section .doorframe .friendPhoto {
+    max-width: 9.688rem;
+    height: 12rem;
+  }
+  footer .wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+  }
+  footer h5 {
+    font-size: 0.813rem;
   }
 }

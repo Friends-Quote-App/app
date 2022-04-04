@@ -162,34 +162,49 @@ footer {
 }
 
 @media (max-width: 699px) {
+  header {
+    .logo {
+      height: auto;
+      p {
+        max-width: 100%;
+        font-size: 1.5rem;
+      }
+    }
+  }
   .quote-selection {
     flex-direction: column;
-
+    .random-button {
+      width: 100%;
+    }
     .dropdown {
       width: 100%;
     }
   }
 
   .quote-section {
-    margin: 30px 0;
+    margin: 1.875rem 0;
     flex-direction: column;
-    .doorframe {
-      .friendPhoto {
-        max-width: 140px;
-        height: 200px;
-      }
-    }
+
     .quotebox {
       width: 100%;
       .board {
         width: 100%;
       }
     }
-
-    footer {
-      .wrapper {
-        flex-direction: column-reverse;
+    .doorframe {
+      width: 100%;
+      .friendPhoto {
+        max-width: 9.688rem;
+        height: 12rem;
       }
+    }
+  }
+  footer {
+    .wrapper {
+      flex-direction: column-reverse;
+    }
+    h5 {
+      font-size: 0.813rem;
     }
   }
 }
