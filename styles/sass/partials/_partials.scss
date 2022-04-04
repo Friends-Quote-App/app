@@ -22,3 +22,12 @@ $blackFriends: #1b1a1a;
     background-color: $hoveredFriends;
   }
 }
+
+/* Importing Friends Font */
+@font-face {
+  font-family: "friends-font";
+  src: url("./assets/gabrwffr-webfont.woff"),
+  url("./assets/gabrwffr-webfont.woff2"),
+  url("./assets/GABRWFFR.TTF");
+  font-weight: normal;
+}
