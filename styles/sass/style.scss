@@ -116,7 +116,6 @@ header {
     .board {
       background-color: $blackFriends;
       border-radius: 0.625rem;
-      box-shadow: 5px 5px $yellowFriends;
       width: 90%;
       height: 40vh;
       display: flex;
@@ -135,7 +134,7 @@ header {
 footer {
   width: 100%;
   bottom: 0;
-  position: relative;
+  position: absolute;
   .wrapper {
     justify-content: space-between;
   }

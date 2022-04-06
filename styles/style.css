@@ -395,8 +395,6 @@ header .logo p {
 .quote-section .quotebox .board {
   background-color: #1b1a1a;
   border-radius: 0.625rem;
-  -webkit-box-shadow: 5px 5px #f8bc1a;
-          box-shadow: 5px 5px #f8bc1a;
   width: 90%;
   height: 40vh;
   display: -webkit-box;
@@ -416,7 +414,7 @@ header .logo p {
 footer {
   width: 100%;
   bottom: 0;
-  position: relative;
+  position: absolute;
 }
 footer .wrapper {
   -webkit-box-pack: justify;
