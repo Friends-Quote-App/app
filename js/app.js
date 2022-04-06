@@ -81,15 +81,15 @@ friendsApp.characterQuotes = (allQuotes, friendChoice) => {
 };
 
 // method to request quote data from api
-friendsApp.getQuotes = () => {
-  fetch(friendsApp.url)
-    .then((response) => response.json())
-    .then((data) => {
-      // storing data in an array
-      const allQuotes = data;
-      // run function to see user selection (returned as "character")
-      friendsApp.userChoice(allQuotes);
-    });
+friendsApp.getQuotes = async () => {
+  try {
+    const response = await fetch(friendsApp.url);
+    const allQuotes = await response.json();
+    friendsApp.userChoice(allQuotes);
+  } catch (error) {
+    console.log(error);
+    alert(error.message);
+  }
 };
 
 friendsApp.updatePhoto = (character) => {
