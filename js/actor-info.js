@@ -21,8 +21,8 @@ actorInfo.headerHost = "online-movie-database.p.rapidapi.com";
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Host': actorInfo.headerHost,
-		'X-RapidAPI-Key': actorInfo.apiKey
+		'X-RapidAPI-Host': `${actorInfo.headerHost}`,
+		'X-RapidAPI-Key': `${actorInfo.apiKey}`
 	}
 };
 
