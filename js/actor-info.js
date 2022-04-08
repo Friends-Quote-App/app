@@ -11,8 +11,19 @@
 
 export const actorInfo = {};
 
+actorInfo.actor.rachel = "nm0000098";
+actorInfo.actor.chandler = "nm0001612";
+actorInfo.actor.ross = "nm0001710";
+actorInfo.actor.joey = "nm0001455";
+actorInfo.actor.phoebe = "nm0001435";
+actorInfo.actor.monica = "nm0001073";
+
 // base url for uIMDB api
-actorInfo.url = new URL("https://online-movie-database.p.rapidapi.com/auto-complete?q=game%20of%20thr");
+actorInfo.url = new URL("https://online-movie-database.p.rapidapi.com/");
+// url for actor bio
+actorInfo.urlActor = new URL("https://online-movie-database.p.rapidapi.com/actors/get-bio?nconst=");
+// url actor image search
+
 // api-key
 actorInfo.apiKey = "6bf02141b3mshed96cc59315b922p1b2b0ajsn395d88c7fcbf";
 // header parameter
@@ -28,9 +39,35 @@ actorInfo.options = {
 
 // method to grab info about actors
 actorInfo.getInfo = () => {
-  fetch(actorInfo.url, actorInfo.options)
+  fetch(`${actorInfo.urlActor}${actorInfo.actor.rachel}`, actorInfo.options)
     .then(response => response.json())
     .then(response => console.log(response))
     .catch(err => console.error(err));
 };
 
+
+
+
+// jennifer anniston
+// feb 11, 1960
+// nm0000098
+
+// matthew perry
+// aug 19, 1969
+// nm0001612
+
+// courtney cox
+// june 15, 1964
+// nm0001073
+
+// david schwimmer
+// nov 2, 1966
+// nm0001710
+
+// matt leblanc
+// july 25, 1967
+// nm0001455
+
+// lisa kudrow
+// july 30, 1963
+// nm0001435
