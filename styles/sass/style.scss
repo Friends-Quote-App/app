@@ -12,10 +12,14 @@ body {
   display: flex;
   align-items: center;
 }
+
 @font-face {
   font-family: "Friends";
-  src: url("../assets/GABRWFFR.TTF");
+  src: url("../assets/GABRWFFR.TTF"),
+  url("../assets/gabrwffr-webfont.woff"),
+  url("../assets/gabrwffr-webfont.woff2");
 }
+
 h1,
 h5 {
   font-family: JuneBug;
