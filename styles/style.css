@@ -235,6 +235,66 @@ html {
   overflow: hidden;
 }
 
+@media (min-width: 700px) and (max-width: 840px) {
+  .quote-section .doorframe .friendPhoto {
+    width: 11.25rem;
+    height: 11.875rem;
+  }
+}
+@media (max-width: 699px) {
+  header .logo {
+    height: auto;
+  }
+  header .logo p {
+    max-width: 100%;
+    font-size: 1.5rem;
+  }
+
+  .quote-selection {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .quote-selection .random-button {
+    width: 100%;
+  }
+  .quote-selection .dropdown {
+    width: 100%;
+  }
+
+  .quote-section {
+    margin: 1.875rem 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .quote-section .quotebox {
+    width: 100%;
+  }
+  .quote-section .quotebox .board {
+    width: 100%;
+    margin-top: 4rem;
+  }
+  .quote-section .doorframe {
+    width: 100%;
+  }
+  .quote-section .doorframe .friendPhoto {
+    max-width: 9.8rem;
+    height: 12.5rem;
+  }
+
+  footer .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  footer h5 {
+    font-size: 0.813rem;
+  }
+}
 body {
   background-color: #1b1a1a;
   height: 100vh;
@@ -424,65 +484,4 @@ footer h5 {
   text-align: center;
   color: #fcfcfc;
   font-family: "Friends";
-}
-
-@media (min-width: 700px) and (max-width: 840px) {
-  .quote-section .doorframe .friendPhoto {
-    width: 11.25rem;
-    height: 11.875rem;
-  }
-}
-@media (max-width: 699px) {
-  header .logo {
-    height: auto;
-  }
-  header .logo p {
-    max-width: 100%;
-    font-size: 1.5rem;
-  }
-
-  .quote-selection {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .quote-selection .random-button {
-    width: 100%;
-  }
-  .quote-selection .dropdown {
-    width: 100%;
-  }
-
-  .quote-section {
-    margin: 1.875rem 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .quote-section .quotebox {
-    width: 100%;
-  }
-  .quote-section .quotebox .board {
-    width: 100%;
-    margin-top: 4rem;
-  }
-  .quote-section .doorframe {
-    width: 100%;
-  }
-  .quote-section .doorframe .friendPhoto {
-    max-width: 9.8rem;
-    height: 12.5rem;
-  }
-
-  footer .wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
-  footer h5 {
-    font-size: 0.813rem;
-  }
 }

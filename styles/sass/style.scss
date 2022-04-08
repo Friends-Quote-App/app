@@ -1,5 +1,6 @@
 @import "./partials/setup";
 @import "./partials/partials";
+@import "./partials/media-queries";
 
 body {
   background-color: $blackFriends;
@@ -154,62 +155,3 @@ footer {
   }
 }
 
-@media (min-width: 700px) and (max-width: 840px) {
-  .quote-section {
-    .doorframe {
-      .friendPhoto {
-        width: 11.25rem;
-        height: 11.875rem;
-      }
-    }
-  }
-}
-
-@media (max-width: 699px) {
-  header {
-    .logo {
-      height: auto;
-      p {
-        max-width: 100%;
-        font-size: 1.5rem;
-      }
-    }
-  }
-  .quote-selection {
-    flex-direction: column;
-    .random-button {
-      width: 100%;
-    }
-    .dropdown {
-      width: 100%;
-    }
-  }
-
-  .quote-section {
-    margin: 1.875rem 0;
-    flex-direction: column;
-
-    .quotebox {
-      width: 100%;
-      .board {
-        width: 100%;
-        margin-top: 4rem;
-      }
-    }
-    .doorframe {
-      width: 100%;
-      .friendPhoto {
-        max-width: 9.8rem;
-        height: 12.5rem;
-      }
-    }
-  }
-  footer {
-    .wrapper {
-      flex-direction: column-reverse;
-    }
-    h5 {
-      font-size: 0.813rem;
-    }
-  }
-}
