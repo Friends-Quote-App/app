@@ -12,11 +12,11 @@
 export const actorInfo = {};
 
 const rachel = "nm0000098";
-actorInfo.actor.chandler = "nm0001612";
-actorInfo.actor.ross = "nm0001710";
-actorInfo.actor.joey = "nm0001455";
-actorInfo.actor.phoebe = "nm0001435";
-actorInfo.actor.monica = "nm0001073";
+const chandler = "nm0001612";
+const ross = "nm0001710";
+const joey = "nm0001455";
+const phoebe = "nm0001435";
+const monica = "nm0001073";
 
 console.log(actorInfo.actor.rachel);
 
