@@ -11,12 +11,14 @@
 
 export const actorInfo = {};
 
-actorInfo.actor.rachel = "nm0000098";
+const rachel = "nm0000098";
 actorInfo.actor.chandler = "nm0001612";
 actorInfo.actor.ross = "nm0001710";
 actorInfo.actor.joey = "nm0001455";
 actorInfo.actor.phoebe = "nm0001435";
 actorInfo.actor.monica = "nm0001073";
+
+console.log(actorInfo.actor.rachel);
 
 // base url for uIMDB api
 actorInfo.url = new URL("https://online-movie-database.p.rapidapi.com/");
@@ -39,7 +41,7 @@ actorInfo.options = {
 
 // method to grab info about actors
 actorInfo.getInfo = () => {
-  fetch(`${actorInfo.urlActor}${actorInfo.actor.rachel}`, actorInfo.options)
+  fetch(`${actorInfo.urlActor}${rachel}`, actorInfo.options)
     .then(response => response.json())
     .then(response => console.log(response))
     .catch(err => console.error(err));
