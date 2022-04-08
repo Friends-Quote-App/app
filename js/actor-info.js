@@ -18,7 +18,7 @@ actorInfo.apiKey = "6bf02141b3mshed96cc59315b922p1b2b0ajsn395d88c7fcbf";
 // header parameter
 actorInfo.headerHost = "online-movie-database.p.rapidapi.com";
 
-const options = {
+actorInfo.options = {
 	method: 'GET',
 	headers: {
 		'X-RapidAPI-Host': `${actorInfo.headerHost}`,
@@ -28,7 +28,7 @@ const options = {
 
 // method to grab info about actors
 actorInfo.getInfo = () => {
-  fetch(actorInfo.url, options)
+  fetch(actorInfo.url, actorInfo.options)
     .then(response => response.json())
     .then(response => console.log(response))
     .catch(err => console.error(err));
