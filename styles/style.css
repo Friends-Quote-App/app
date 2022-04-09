@@ -256,11 +256,6 @@ body {
   src: url("../assets/GABRWFFR.TTF"), url("../assets/gabrwffr-webfont.woff"), url("../assets/gabrwffr-webfont.woff2");
 }
 
-h1,
-h5 {
-  font-family: JuneBug;
-}
-
 header .logo {
   width: 100%;
   height: 35rem;
