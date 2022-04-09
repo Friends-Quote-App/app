@@ -31,7 +31,7 @@
   }
 
   .quote-section {
-    margin: 1.875rem 0;
+    margin: 10rem 0 1.875rem 0;
     flex-direction: column;
 
     .quotebox {
@@ -56,5 +56,11 @@
     h5 {
       font-size: 0.813rem;
     }
+  }
+}
+
+@media (max-width: 540px) {
+  .quote-section {
+    margin-top: 5rem;
   }
 }
