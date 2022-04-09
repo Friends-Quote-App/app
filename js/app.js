@@ -1,5 +1,5 @@
 import { photoFriends } from "./friends.js";
-import { actorInfo } from "./actor-info.js";
+// import { actorInfo } from "./actor-info.js";
 
 const friendsApp = {};
 

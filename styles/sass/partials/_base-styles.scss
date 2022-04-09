@@ -14,6 +14,7 @@ $blackFriends: #1b1a1a;
   border: 1px solid $whiteFriends;
   font-weight: bold;
   font-size: 1.5rem;
+  cursor: pointer;
   i {
     color: $blackFriends;
     padding-left: 0.625rem;
@@ -37,9 +38,8 @@ body {
 
 @font-face {
   font-family: "Friends";
-  src: url("../assets/GABRWFFR.TTF"),
-  url("../assets/gabrwffr-webfont.woff"),
-  url("../assets/gabrwffr-webfont.woff2");
+  src: url("../assets/GABRWFFR.TTF"), url("../assets/gabrwffr-webfont.woff"),
+    url("../assets/gabrwffr-webfont.woff2");
 }
 
 h1,
@@ -160,7 +160,6 @@ header {
 footer {
   width: 100%;
   bottom: 0;
-  position: absolute;
   .wrapper {
     justify-content: space-between;
   }
@@ -175,4 +174,3 @@ footer {
     font-family: "Friends";
   }
 }
-
