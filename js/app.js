@@ -1,5 +1,4 @@
 import { photoFriends } from "./friends.js";
-// import { actorInfo } from "./actor-info.js";
 
 const friendsApp = {};
 
@@ -80,7 +79,6 @@ friendsApp.updatePhoto = (character) => {
 friendsApp.init = () => {
   // calling the method that makes the api request
   friendsApp.getQuotes();
-  actorInfo.getInfo();
 };
 
 // call the init method to start the app
