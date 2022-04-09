@@ -47,7 +47,6 @@ friendsApp.characterQuotes = (allQuotes, friendChoice) => {
   });
   // select a random quote from array
   // pass random quote variable to friendsApp.displayData method
-  console.log(characterQuotes);
   const randomQuote =
     characterQuotes[Math.floor(Math.random() * characterQuotes.length)].quote;
 
@@ -62,7 +61,6 @@ friendsApp.getQuotes = async () => {
     const allQuotes = await response.json();
     friendsApp.userChoice(allQuotes);
   } catch (error) {
-    console.log(error);
     alert(error.message);
   }
 };
