@@ -1,85 +1,67 @@
-// create function to grab information about each actor
-    // grab user selected character variable
-    // turn character variable into actor name
-    // search unofficial imdb api for actor information
-    // store information into variables
+import { actor } from "./friends.js";
 
-// display function to show actor information to the webpage
-    // create new elements for display
-    // append new elements with retreived actor information
+export const actorInfo = {};
 
-    import { actor } from "./friends.js";
+// base url and endpoint urls
+actorInfo.url = new URL("https://online-movie-database.p.rapidapi.com/");
+actorInfo.urlActor = new URL("https://online-movie-database.p.rapidapi.com/actors/get-bio?nconst=");
 
-    console.log("test");
+// api-key & header parameters
+actorInfo.apiKey = "6bf02141b3mshed96cc59315b922p1b2b0ajsn395d88c7fcbf";
+actorInfo.headerHost = "online-movie-database.p.rapidapi.com";
+actorInfo.options = {
+  method: 'GET',
+  headers: {
+    'X-RapidAPI-Host': `${actorInfo.headerHost}`,
+    'X-RapidAPI-Key': `${actorInfo.apiKey}`
+  }
+};
 
-    const actorInfo = {};
+// method to grab actor information
+actorInfo.getInfo = (friendChoice) => {
+  // convert character choice into actor ID and search API
+  const actorID = actor[friendChoice];
+  fetch(`${actorInfo.urlActor}${actorID}`, actorInfo.options)
+    .then(response => response.json())
+    .then(response => {
+      actorInfo.displayActorData(response);
 
-    console.log(actor.Chandler);
-    
-    // base url for uIMDB api
-    actorInfo.url = new URL("https://online-movie-database.p.rapidapi.com/");
-    // url for actor bio
-    actorInfo.urlActor = new URL("https://online-movie-database.p.rapidapi.com/actors/get-bio?nconst=");
-    // url actor image search
-    
-    // api-key
-    actorInfo.apiKey = "6bf02141b3mshed96cc59315b922p1b2b0ajsn395d88c7fcbf";
-    // header parameter
-    actorInfo.headerHost = "online-movie-database.p.rapidapi.com";
-    
-    actorInfo.options = {
-      method: 'GET',
-      headers: {
-        'X-RapidAPI-Host': `${actorInfo.headerHost}`,
-        'X-RapidAPI-Key': `${actorInfo.apiKey}`
-      }
-    };
-    
-    // method to grab info about actors
-    actorInfo.getInfo = () => {
-      fetch(`${actorInfo.urlActor}${actor.Chandler}`, actorInfo.options)
-        .then(response => response.json())
-        .then(response => {
-          const actorName = response.name;
-          const bio = response.miniBios[0].text;
-          console.log(response);
-          console.log(actorName, bio);
-        
-        
-        })
-        .catch(err => console.error(err));
-    };
+    })
+    .catch(err => console.error(err));
+};
 
-    actorInfo.init = () => {
-      actorInfo.getInfo();
-    }
+// display Actor information to screen
+actorInfo.displayActorData = (data) => {
+  // create new elements and store actor info inside
+  const actorName = document.createElement("h3");
+  actorName.innerText = `Real Name: ${data.name}`;
+  const actorBio = document.createElement("p");
+  actorBio.innerText = data.miniBios[0].text;
+  const actorBirthDate = document.createElement("p");
+  actorBirthDate.innerText = data.birthDate; 
+  const actorBirthPlace = document.createElement("p");
+  actorBirthPlace.innerText = data.birthPlace;
+  const actorHeight = document.createElement("p");
+  actorHeight.innerText = data.heightCentimeters;
 
-    actorInfo.init();
-    
-    
-    
-    
-    
-    // jennifer anniston
-    // feb 11, 1960
-    // nm0000098
-    
-    // matthew perry
-    // aug 19, 1969
-    // nm0001612
-    
-    // courtney cox
-    // june 15, 1964
-    // nm0001073
-    
-    // david schwimmer
-    // nov 2, 1966
-    // nm0001710
-    
-    // matt leblanc
-    // july 25, 1967
-    // nm0001455
-    
-    // lisa kudrow
-    // july 30, 1963
-    // nm0001435
+  // create container div and add actor info
+  const actorInfoDiv = document.createElement("div");
+  actorInfoDiv.classList.add("actor-bio");
+
+  actorInfoDiv.appendChild(actorName);
+  actorInfoDiv.appendChild(actorBio);
+  actorInfoDiv.appendChild(actorBirthDate);
+  actorInfoDiv.appendChild(actorBirthPlace);
+  actorInfoDiv.appendChild(actorHeight);
+
+  // clear current text in div
+  document.querySelector("#actor-bio").innerHTML = "";
+  // add actor info div to page
+  document.querySelector("#actor-bio").appendChild(actorInfoDiv);
+}
+
+actorInfo.init = (friendChoice) => {
+  actorInfo.getInfo(friendChoice);
+}
+
+// actorInfo.init();
