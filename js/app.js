@@ -1,4 +1,6 @@
 import { photoFriends } from "./friends.js";
+import { actor } from "./friends.js";
+import { actorInfo } from "./actor-info.js"
 
 const friendsApp = {};
 
@@ -20,8 +22,11 @@ friendsApp.userChoice = (allQuotes) => {
     friendsApp.characterQuotes(allQuotes, friendChoice);
     //run method to display image on page
     friendsApp.updatePhoto(friendChoice);
+    // run IMPORTED method to call on second API data to show Actor Information (maybe change this to only show if user Clicks a button)
+    actorInfo.init(friendChoice);
   });
 };
+
 
 // method to display quote on page
 friendsApp.displayData = (displayQuote) => {
