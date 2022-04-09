@@ -23,6 +23,7 @@ friendsApp.userChoice = (allQuotes) => {
   });
 };
 
+
 // method to display quote on page
 friendsApp.displayData = (displayQuote) => {
   // create new p element
