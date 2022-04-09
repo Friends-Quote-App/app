@@ -1,0 +1,176 @@
+//Style
+
+$whiteFriends: #fcfcfc;
+$yellowFriends: #f8bc1a;
+$hoveredFriends: #e2a600;
+$blackFriends: #1b1a1a;
+
+@mixin button {
+  background-color: $yellowFriends;
+  color: $blackFriends;
+  width: 20rem;
+  height: 3.12rem;
+  border-radius: 0.625rem;
+  border: 1px solid $whiteFriends;
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+  i {
+    color: $blackFriends;
+    padding-left: 0.625rem;
+  }
+  &:hover {
+    background-color: $hoveredFriends;
+  }
+}
+
+body {
+  background-color: $blackFriends;
+  height: 100vh;
+}
+
+.wrapper {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+@font-face {
+  font-family: "Friends";
+  src: url("../assets/GABRWFFR.TTF"), url("../assets/gabrwffr-webfont.woff"),
+    url("../assets/gabrwffr-webfont.woff2");
+}
+
+h1,
+h5 {
+  font-family: JuneBug;
+}
+
+//Header
+header {
+  .logo {
+    width: 100%;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 70%;
+      height: 70%;
+    }
+    p {
+      text-align: center;
+      font-size: 2rem;
+      color: $whiteFriends;
+      font-family: "Friends";
+      max-width: 60%;
+      text-align: center;
+    }
+  }
+}
+
+//Quote Selection
+.quote-selection {
+  width: 100%;
+  height: 15rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  //Dropdown menu
+  .dropdown {
+    width: 50%;
+    text-align: center;
+    label {
+      color: $whiteFriends;
+      font-size: 1.5rem;
+      font-family: "Roboto", sans-serif;
+      padding-right: 1.5rem;
+    }
+    select {
+      width: 10rem;
+      padding-left: 0.625rem;
+      height: 2.5rem;
+    }
+  }
+  .random-button {
+    width: 50%;
+    text-align: center;
+    button {
+      @include button;
+      font-family: "Friends";
+    }
+  }
+}
+
+//Door frame for photos
+.quote-section {
+  display: flex;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 40rem;
+  .doorframe {
+    position: relative;
+    width: 50%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .frame {
+      position: absolute;
+      z-index: 5;
+      width: 80%;
+      height: auto;
+    }
+    .friendPhoto {
+      z-index: 1;
+      position: absolute;
+      width: 220px;
+      height: 280px;
+      object-fit: cover;
+      object-position: 100% 0;
+    }
+  }
+
+  // Quote box
+  .quotebox {
+    height: auto;
+    width: 50%;
+
+    .board {
+      background-color: $blackFriends;
+      border-radius: 0.625rem;
+      width: 90%;
+      height: 40vh;
+      display: flex;
+      align-items: center;
+      p {
+        font-family: "Friends";
+        color: $whiteFriends;
+        padding: 2rem;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+//Footer
+footer {
+  width: 100%;
+  bottom: 0;
+  .wrapper {
+    justify-content: space-between;
+  }
+  .logo-footer {
+    width: 30%;
+    height: auto;
+  }
+  h5 {
+    font-size: 20px;
+    text-align: center;
+    color: $whiteFriends;
+    font-family: "Friends";
+  }
+}
