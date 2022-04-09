@@ -14,7 +14,7 @@ article, aside, footer, header, nav, section {
 
 h1 {
   font-size: 2em;
-  margin: .67em 0;
+  margin: 0.67em 0;
 }
 
 figcaption, figure, main {
@@ -33,7 +33,7 @@ hr {
 }
 
 pre {
-  font-family: monospace,monospace;
+  font-family: monospace, monospace;
   font-size: 1em;
 }
 
@@ -58,7 +58,7 @@ b, strong {
 }
 
 code, kbd, samp {
-  font-family: monospace,monospace;
+  font-family: monospace, monospace;
   font-size: 1em;
 }
 
@@ -83,11 +83,11 @@ sub, sup {
 }
 
 sub {
-  bottom: -.25em;
+  bottom: -0.25em;
 }
 
 sup {
-  top: -.5em;
+  top: -0.5em;
 }
 
 audio, video {
@@ -136,7 +136,7 @@ button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring
 }
 
 fieldset {
-  padding: .35em .75em .625em;
+  padding: 0.35em 0.75em 0.625em;
 }
 
 legend {
@@ -206,7 +206,7 @@ template {
   visibility: hidden;
   display: block;
   font-size: 0;
-  content: '';
+  content: "";
   clear: both;
   height: 0;
 }
@@ -255,7 +255,6 @@ body {
   font-family: "Friends";
   src: url("../assets/GABRWFFR.TTF"), url("../assets/gabrwffr-webfont.woff"), url("../assets/gabrwffr-webfont.woff2");
 }
-
 h1,
 h5 {
   font-family: JuneBug;
@@ -278,12 +277,10 @@ header .logo {
       -ms-flex-pack: center;
           justify-content: center;
 }
-
 header .logo img {
   width: 70%;
   height: 70%;
 }
-
 header .logo p {
   text-align: center;
   font-size: 2rem;
@@ -306,30 +303,25 @@ header .logo p {
       -ms-flex-align: center;
           align-items: center;
 }
-
 .quote-selection .dropdown {
   width: 50%;
   text-align: center;
 }
-
 .quote-selection .dropdown label {
   color: #fcfcfc;
   font-size: 1.5rem;
   font-family: "Roboto", sans-serif;
   padding-right: 1.5rem;
 }
-
 .quote-selection .dropdown select {
   width: 10rem;
   padding-left: 0.625rem;
   height: 2.5rem;
 }
-
 .quote-selection .random-button {
   width: 50%;
   text-align: center;
 }
-
 .quote-selection .random-button button {
   background-color: #f8bc1a;
   color: #1b1a1a;
@@ -342,12 +334,10 @@ header .logo p {
   cursor: pointer;
   font-family: "Friends";
 }
-
 .quote-selection .random-button button i {
   color: #1b1a1a;
   padding-left: 0.625rem;
 }
-
 .quote-selection .random-button button:hover {
   background-color: #e2a600;
 }
@@ -363,7 +353,6 @@ header .logo p {
   margin: 0 auto;
   height: 40rem;
 }
-
 .quote-section .doorframe {
   position: relative;
   width: 50%;
@@ -378,14 +367,12 @@ header .logo p {
       -ms-flex-pack: center;
           justify-content: center;
 }
-
 .quote-section .doorframe .frame {
   position: absolute;
   z-index: 5;
   width: 80%;
   height: auto;
 }
-
 .quote-section .doorframe .friendPhoto {
   z-index: 1;
   position: absolute;
@@ -396,12 +383,10 @@ header .logo p {
   -o-object-position: 100% 0;
      object-position: 100% 0;
 }
-
 .quote-section .quotebox {
   height: auto;
   width: 50%;
 }
-
 .quote-section .quotebox .board {
   background-color: #1b1a1a;
   border-radius: 0.625rem;
@@ -414,7 +399,6 @@ header .logo p {
       -ms-flex-align: center;
           align-items: center;
 }
-
 .quote-section .quotebox .board p {
   font-family: "Friends";
   color: #fcfcfc;
@@ -426,18 +410,15 @@ footer {
   width: 100%;
   bottom: 0;
 }
-
 footer .wrapper {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-
 footer .logo-footer {
   width: 30%;
   height: auto;
 }
-
 footer h5 {
   font-size: 20px;
   text-align: center;
@@ -451,7 +432,6 @@ footer h5 {
     height: 11.875rem;
   }
 }
-
 @media (max-width: 699px) {
   header .logo {
     height: auto;
@@ -460,6 +440,7 @@ footer h5 {
     max-width: 100%;
     font-size: 1.5rem;
   }
+
   .quote-selection {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -472,8 +453,9 @@ footer h5 {
   .quote-selection .dropdown {
     width: 100%;
   }
+
   .quote-section {
-    margin: 1.875rem 0;
+    margin: 10rem 0 1.875rem 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -493,6 +475,7 @@ footer h5 {
     max-width: 9.8rem;
     height: 12.5rem;
   }
+
   footer .wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -501,5 +484,10 @@ footer h5 {
   }
   footer h5 {
     font-size: 0.813rem;
+  }
+}
+@media (max-width: 540px) {
+  .quote-section {
+    margin-top: 5rem;
   }
 }
