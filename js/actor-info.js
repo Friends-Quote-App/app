@@ -25,11 +25,9 @@ actorInfo.getInfo = (friendChoice) => {
     .then(response => response.json())
     .then(response => {
       actorInfo.displayActorData(response);
-
     })
     .catch(err => console.error(err));
 };
-
 // display Actor information to screen
 actorInfo.displayActorData = (data) => {
   // create new elements and store actor info inside
@@ -63,5 +61,3 @@ actorInfo.displayActorData = (data) => {
 actorInfo.init = (friendChoice) => {
   actorInfo.getInfo(friendChoice);
 }
-
-// actorInfo.init();
