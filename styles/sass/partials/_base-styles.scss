@@ -138,7 +138,6 @@ header {
       background-color: $blackFriends;
       border-radius: 0.625rem;
       width: 90%;
-      height: 40vh;
       display: flex;
       align-items: center;
       p {
@@ -153,7 +152,24 @@ header {
 
 // Actor Information Section
 .actor-bio {
-  color: $whiteFriends;
+  width: 90%;
+  margin: 2rem auto;
+  padding: 10px 10px;
+  .actorInfoDiv {
+    width: 90%;
+    border: 3px solid $whiteFriends;
+    padding: 2rem;
+  }
+  h3 {
+    color: $yellowFriends;
+    font-family: "Friends";
+    font-size: 1.5rem;
+  }
+  p {
+    color: $whiteFriends;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+  }
 }
 
 //Footer
