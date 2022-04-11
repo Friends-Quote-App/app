@@ -176,6 +176,7 @@ header {
 footer {
   width: 100%;
   bottom: 0;
+  position: relative;
   .wrapper {
     justify-content: space-between;
   }
@@ -183,10 +184,15 @@ footer {
     width: 30%;
     height: auto;
   }
-  h5 {
+  h5,
+  a {
     font-size: 20px;
     text-align: center;
     color: $whiteFriends;
     font-family: "Friends";
+    &:link {
+      color: $whiteFriends;
+      text-decoration: none;
+    }
   }
 }

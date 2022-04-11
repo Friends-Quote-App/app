@@ -443,6 +443,7 @@ header .logo p {
 footer {
   width: 100%;
   bottom: 0;
+  position: relative;
 }
 
 footer .wrapper {
@@ -456,11 +457,18 @@ footer .logo-footer {
   height: auto;
 }
 
-footer h5 {
+footer h5,
+footer a {
   font-size: 20px;
   text-align: center;
   color: #fcfcfc;
   font-family: "Friends";
+}
+
+footer h5:link,
+footer a:link {
+  color: #fcfcfc;
+  text-decoration: none;
 }
 
 @media (min-width: 700px) and (max-width: 840px) {
